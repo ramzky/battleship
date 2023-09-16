@@ -1,0 +1,120 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');*/
+
+:root {
+  box-sizing: border-box;
+  --main-size: 60rem; /* 30rem=480px */
+  --sub-color: #8d8d8d;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana sans-serif;
+  font-family: 'Quicksand', sans-serif;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  min-height: 100vh;
+  /*display: flex;*/
+}
+.container {
+  margin: 0 auto;
+  flex: 0 0 auto;
+  /*background-image: url('./bg.jpg');*/
+  /*use below bg on menu tab*/
+  /*background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url('./bg.jpg');*/
+}
+.flex-top-box {
+  width: min(max(calc(var(--main-size) + 30rem), 100%), calc(var(--main-size) + 30rem));
+  min-height: calc(var(--main-size) - 20rem);
+  /*border: 0.0625rem solid black;*/
+  background-color: transparent;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+}
+.flex-box {
+  /*min-height: 2.5rem;*/
+  flex: 0 0 100%;
+  display: flex;
+  flex-flow: row wrap;
+  /*border: 0.0625rem solid goldenrod;*/
+}
+/*
+for flex let the item that change size
+to set the width of flex container
+**dont set width!
+*/
+.flex-item {
+  flex: 0 0 100%;
+  /*border: 0.0625rem solid goldenrod;*/
+}
+
+.p1side, .cpuside {
+  flex: 0 0 50%;
+  align-items: start;
+  padding: 0 5rem;
+}
+.side {
+  /*background-color: #e4e4e4;*/
+  opacity: 0.5;
+}
+h1 {
+  display: block;
+}
+.board {
+  
+}
+.cell {
+  flex: 0 0 auto;
+  /*border: 0.0625rem solid cornflowerblue;*/
+}
+.cell > button {
+  height: 100%;
+  width: 100%;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+  border: 0.0625rem solid rgb(147, 150, 156);
+  border-radius: .2rem;
+}
+.cell > button:hover {
+  cursor: pointer;
+  color: #7287E9;
+  background-color: #e6e6e6;
+}
+.cell > .ship {
+  border: .2rem solid cornflowerblue;
+}
+.cell > .miss {
+  border-color: #e0482d;
+  background-color: #e27663;
+}
+.cell > .miss:hover {
+  background-color: #e27663;
+}
+.cell > .hit {
+  border-color: #c22f42;
+  background-color: #e97a89;
+  border-width: .2rem;
+}
+.cell > .hit:hover {
+  background-color: #e97a89;
+}
+
+.reset {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: .2rem;
+  font-size: 1.5rem;
+}
+.reset:hover {
+  cursor: pointer;
+  color: #7287E9;
+}
